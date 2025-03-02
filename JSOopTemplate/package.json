@@ -1,0 +1,46 @@
+{
+  "name": "JSOopTemplate",
+  "version": "001",
+  "description": "Oop JS quickstart template",
+  "main": "src/index.js",
+  "type": "module",
+  "module": "src/index.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "lint": "standard --verbose | snazzy"
+  },
+  "author": "cody-it:/#",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "cssnano": "^7.0.6",
+    "postcss-reporter": "^7.1.0",
+    "rollup": "^4.34.9",
+    "rollup-plugin-postcss": "^4.0.2",
+    "snazzy": "^9.0.0",
+    "standard": "^17.1.2",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard": "^37.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "build/",
+      "dist/"
+    ],
+    "globals": [
+      "console",
+      "document",
+      "setTimeout"
+    ]
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "dependencies": {
+    "npm-check-updates": "^17.1.15"
+  }
+}
