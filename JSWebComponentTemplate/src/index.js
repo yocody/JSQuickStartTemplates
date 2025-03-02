@@ -2,6 +2,8 @@
  * js WebComponent template
  */
 
+/* global console, document, requestAnimationFrame, setTimeout  */
+
 /* eslint spaced-comment: ["error", "always", { "block": { "balanced": true }}], semi: ["error", "always"], space-in-parens: ["error", "always"], "indent": ["error", 4], no-trailing-spaces: ["error", { "skipBlankLines": true, "ignoreComments": true }], one-var: ["error", { var: "always", let: "always", const: "never" }], object-shorthand: ["error", "never"] */
 
 'use strict';
@@ -17,8 +19,7 @@ let domElementsAdded = false,
     stage = null,
     customElementsDefined = false;
     
-const init = ( route ) => {
-    // console.log( 'core init reached. Route requested: ' + route );
+const init = () => {
     if ( !customElementsDefined ) {
         try {
             defineTopbar( topbarTemplate );
@@ -41,7 +42,7 @@ const init = ( route ) => {
 };
 
 const addDomElements = () => {
-    return new Promise( ( resolve, reject ) => {
+    return new Promise( ( resolve ) => {
         const fragment = document.createDocumentFragment();
         const mainStageWrapper = document.createElement( 'div' );
         mainStageWrapper.id = 'main-stage-wrapper';

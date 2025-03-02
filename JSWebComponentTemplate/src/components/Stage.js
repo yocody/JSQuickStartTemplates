@@ -2,6 +2,8 @@
  * Component: stage
  */
 
+/* global window, document, HTMLElement, requestAnimationFrame, setTimeout, customElements  */
+
 /* eslint spaced-comment: ["error", "always", { "block": { "balanced": true }}], semi: ["error", "always"], space-in-parens: ["error", "always"], "indent": ["error", 4, { "SwitchCase": 1 }], no-trailing-spaces: ["error", { "skipBlankLines": true, "ignoreComments": true }], no-useless-return: 0, object-shorthand: ["error", "never"], no-unused-vars: ["error"], dot-notation: 0 */
 
 const defineStage = ( html ) => {
@@ -51,7 +53,7 @@ const defineStage = ( html ) => {
                 this.isTablet = false;
                 this.isMobile = false;
             }
-        };
+        }
         
         /* ----------- */
         /* attributes setter / getter / onchanged */

@@ -2,6 +2,8 @@
  * Component: topbar
  */
 
+/* global window, document, HTMLElement, requestAnimationFrame, setTimeout, customElements  */
+
 /* eslint spaced-comment: ["error", "always", { "block": { "balanced": true }}], semi: ["error", "always"], space-in-parens: ["error", "always"], "indent": ["error", 4, { "SwitchCase": 1 }], no-trailing-spaces: ["error", { "skipBlankLines": true, "ignoreComments": true }], no-unused-vars: ["error"], object-shorthand: ["error", "never"], dot-notation: 0 */
 
 const defineTopbar = ( html ) => {
@@ -50,7 +52,7 @@ const defineTopbar = ( html ) => {
                 this.isTablet = false;
                 this.isMobile = false;
             }
-        };
+        }
         
         /* ----------- */
         /* attributes setter / getter / onchanged */
