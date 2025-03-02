@@ -14,7 +14,7 @@ class DummyObject {
      * @private
      */
     #mainElement = null;
-    #debugMode = 0;
+    #debugMode = 1;
      
     /**
      * @constructor
@@ -34,10 +34,10 @@ class DummyObject {
      */
     #addDomContent () {
         try {
-            const body = document.querySelector( 'main' );
+            const main = document.querySelector( 'main' );
             const overlayHtml = `<div class="main-overlay"><span>Hello World</span></div>`;
             const content = document.createRange().createContextualFragment( overlayHtml );
-            body.append( content );
+            main.append( content );
             
             setTimeout( () => {
                 const overlay = document.querySelector( 'div.main-overlay' );
